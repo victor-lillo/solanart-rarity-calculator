@@ -11,7 +11,7 @@
             }
         }
     ],
-    "cicle_delay": "2000",
+    "cycle_delay": "2000",
     "collection_auto_fetcher": false,
     "auto_query_api_slug": false,
     "excluded_collections": [],

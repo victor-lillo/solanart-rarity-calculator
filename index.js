@@ -8,7 +8,7 @@ const rarityJSON = require('./src/rarity-json');
 const { createDirs, msToMinAndSecs, sleep, getCollectionTotalNumber, arrayFilter, arrayCutter, numberWithPoints } = require('./src/various');
 const { API_request } = require('./src/api-request');
 const { processData } = require('./src/process-data');
-const { collection_auto_fetcher, cicle_delay, auto_query_api_slug, excluded_collections } = require('./devSettings.json');
+const { collection_auto_fetcher, cycle_delay, auto_query_api_slug, excluded_collections } = require('./devSettings.json');
 const { starting_collection } = require('./devSettings.json');
 const { discordSummary, discordError } = require('./src/discord');
 
@@ -147,8 +147,8 @@ const resolve = async () => {
 
             //Si es el último ciclo, no hace sleep
             if (collectionsToGet.indexOf(collectionSlug) < collectionsToGet.length - 1) {
-                console.log(`Waiting for ${cicle_delay} ms...\n`);
-                await sleep(cicle_delay)
+                console.log(`Waiting for ${cycle_delay} ms...\n`);
+                await sleep(cycle_delay)
             }
         }
         //Si el error es de formato de traits, ejecutamos con los listados únicamente.
@@ -173,8 +173,8 @@ const resolve = async () => {
 
                 //Si es el último ciclo, no hace sleep
                 if (collectionsToGet.indexOf(collectionSlug) < collectionsToGet.length - 1) {
-                    console.log(`Waiting for ${cicle_delay} ms...\n`);
-                    await sleep(cicle_delay)
+                    console.log(`Waiting for ${cycle_delay} ms...\n`);
+                    await sleep(cycle_delay)
                 }
             }
             //Si da error aquí, es porque están mal los traits de los NFTs listados
@@ -215,7 +215,7 @@ const resolve = async () => {
 
 
     discordSummary(
-        ` \`\`Cicle delay:\`\` ${cicle_delay} ms\n\`\`Collection auto fetcher:\`\` ${collection_auto_fetcher}\n\`\`Auto query api slug:\`\` ${auto_query_api_slug}\n`,
+        ` \`\`Cycle delay:\`\` ${cycle_delay} ms\n\`\`Collection auto fetcher:\`\` ${collection_auto_fetcher}\n\`\`Auto query api slug:\`\` ${auto_query_api_slug}\n`,
 
         `\`\`Collections:\`\` **${collectionsToGet_unfiltered.length - collections_null_traits.length - collections_broken.length - filteredCollections_number}/${collectionsToGet_unfiltered.length}**\n \`\`Time:\`\` ${msToMinAndSecs(t1 - t0)} minutes\n\`\`Total items analized:\`\` ${numberWithPoints(total_items)}\n\`\`New items since last run:\`\` ${numberWithPoints(added_items)}\n`,
 
