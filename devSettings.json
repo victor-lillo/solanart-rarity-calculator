@@ -1,0 +1,19 @@
+{
+    "__comments": [
+        {
+            "collection_auto_fetcher": {
+                "true": "get collections from solanart pseudo api",
+                "false": "get collections from manually filled array"
+            },
+            "auto_query_api_slug": {
+                "true": "get query slug (initial url code) from solanart pseudo api",
+                "false": "manually introduced"
+            }
+        }
+    ],
+    "cicle_delay": "2000",
+    "collection_auto_fetcher": false,
+    "auto_query_api_slug": false,
+    "excluded_collections": [],
+    "starting_collection": ""
+}
