@@ -1,6 +1,11 @@
 > ⚠ I created this repository some time ago, while studying and practising coding. 
 > This is not a real sample of my current coding skills. ;)
 
+<br />
+
+### Disclaimer
+`` I just did this for personal use and because I wanted to develop my coding skills. I don't know if this is working nowadays (probably not).``
+
 # solanart-rarity-calculator
 
 > Calculates Solanart NFT collections rarity.
